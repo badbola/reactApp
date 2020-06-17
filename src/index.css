@@ -29,3 +29,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+/*****************Navbar**********************/
+.nav-container{
+  height: 6vh;
+  background-color: #ffc90d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-inside{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.nav-inside img{
+  width: 6vh;
+}
+.nav-inside span{
+  background-color: black;
+  color: white;
+  width: 2.5vh;
+  height: 2.5vh;
+  text-align: center;
+  padding: 0 2px 3px 2px;
+  border-radius: 50%;
+  align-items: center;
+  position: absolute;
+  top: 0.5px;
+  right: 2px;
+}

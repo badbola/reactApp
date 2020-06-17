@@ -1,33 +1,33 @@
 import React from 'react';
 
-class CartItem extends React.Component {
+const CartItem =(props)=> {
     
-    increaseQty=()=>{
-        //set form 1
-        // console.log(++this.state.Qty);
-        // this.setState({
-        //     Qty: this.state.Qty+1
-        // });
-        //set form 2
-        this.setState((prevState) => {
-           return{
-               Qty: prevState.Qty+1
-           } 
-        });
-    }
-    decreaseQty=()=>{
-        this.setState((prevState) =>{
-            if(prevState.Qty>1){
-                return{
-                    Qty: prevState.Qty-1
-                }
-            }
-        });
-    }
-    render() {
+    // increaseQty=()=>{
+    //     //set form 1
+    //     // console.log(++this.state.Qty);
+    //     // this.setState({
+    //     //     Qty: this.state.Qty+1
+    //     // });
+    //     //set form 2
+    //     this.setState((prevState) => {
+    //        return{
+    //            Qty: prevState.Qty+1
+    //        } 
+    //     });
+    // }
+    // decreaseQty=()=>{
+    //     this.setState((prevState) =>{
+    //         if(prevState.Qty>1){
+    //             return{
+    //                 Qty: prevState.Qty-1
+    //             }
+    //         }
+    //     });
+    // }
+    
        // console.log(this.props);
-        const { price,title, Qty} = this.props.product;
-        const {product, onIncreaseQuantity , onDecreaseQuantity, onDelete} = this.props;
+        const { price,title, Qty} = props.product;
+        const {product, onIncreaseQuantity , onDecreaseQuantity, onDelete} = props;
         return(
             <div className="cart-item">
                 <div className="left-block">
@@ -58,7 +58,6 @@ class CartItem extends React.Component {
                 </div>
             </div>
         );
-    }
 }
 
 const styles = {
